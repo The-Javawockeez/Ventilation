@@ -1,5 +1,8 @@
 # Ventilation
 
+## Project description 
+The intent of this website is to be a social media page that allows users to vent. You are able to look at all the posts users make, hide posts from your feed, view specific users and all of the posts that they made, and flag/save posts for quick referance.
+
 ## Project matrix
 
 ## Wireframes
