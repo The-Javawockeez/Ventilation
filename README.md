@@ -10,6 +10,11 @@
 
 [Time](https://imgur.com/a/gG6NRvs)
 
+## Architecture
+[React](https://docs.google.com/document/d/1ddjGDXA1ZWrOC4iezI0iD9HuuCDMVW92dDqQazvKYvs/edit)
+
+[Backend](https://lucid.app/lucidchart/b15f531e-1a16-45a1-9b39-2512bf8ae66d/edit?beaconFlowId=DF124C1015CF60D0&page=0_0&invitationId=inv_0dd85b3e-805b-45e3-8a13-5830c27a2816#)
+
 ## Mvp
 - Routes 
 - Get all posts 
@@ -59,3 +64,11 @@
 - Express 
 - React 
 - React-router
+
+## Project manager rotations
+| Day | Manager | Goal | Achived |
+| --- | :---: |  :---: | :---: | 
+| Monday        | Paige | Wireframes / project layout | - |
+| Tuesday       | AJ / Robby | Backend finished and deployed / React skeleton finished and started on page layout | - |
+| Wednesday     | Marti | Front end finishing touchesand deployment  | - |
+| Thursday      | Paige | CSS and bug fixes | - |
