@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Ventilation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project matrix
 
-## Available Scripts
+## Wireframes
 
-In the project directory, you can run:
+[desktop] (https://www.figma.com/file/Pr4EvHTaiPUvOYsRMdhBgl/Untitled?node-id=0%3A1)
 
-### `npm start`
+[mobile] (https://www.figma.com/file/D3OcDAu9EKstzYyahdjymK/Untitled?node-id=0%3A1)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Time] (https://imgur.com/a/gG6NRvs)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Mvp
+- Routes 
+- Get all posts 
+- Create posts
+- Remove posts
+- Edit posts 
+- Nav bar
+- About page
 
-### `npm test`
+| Component | Priority | Estimated Time | Actual Time |
+| --- | :---: |  :---: | :---: | 
+| Routes                 | H | 1.5hrs   | TBD |
+| Get all posts          | H | 1hr      | TBD |
+| Create posts           | H | 1hr      | TBD |
+| Remove posts           | H | 1hr      | TBD |
+| Edit posts             | H | 1hr      | TBD |
+| Nav bar                | H | 1hr      | TBD |
+| About page             | H | 2hrs     | TBD |
+| Page styling           | M | 8hrs     | TBD |
+| Deploying              | M | 4hrs     | TBD |
+| Total                  |   | 20.5hrs  | TBD |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Post MVP
+- Search funtion
+- Flag posts/ saved list
+- Display user profiles
+- Upvote filtering system
+- Hamburger nav
 
-### `npm run build`
+| Component | Priority | Estimated Time | Actual Time |
+| --- | :---: |  :---: | :---: | 
+| Search function          | M | 3hrs    ||
+| Flag / save list         | M | 2hrs    ||
+| Display user profiles    | M | 3.5hrs  ||
+| Upvote filtering system  | L | 6hrs    ||
+| Hamburger nav            | L | 1hr     ||
+| Total                    |   | 15hrs   ||
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Component
+- Home
+- Post
+- About
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Additional libraries
+- Mongoose
+- dotenv
+- Express 
+- React 
+- React-router
