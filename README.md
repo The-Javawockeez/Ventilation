@@ -4,11 +4,11 @@
 
 ## Wireframes
 
-[desktop] (https://www.figma.com/file/Pr4EvHTaiPUvOYsRMdhBgl/Untitled?node-id=0%3A1)
+[Desktop](https://www.figma.com/file/Pr4EvHTaiPUvOYsRMdhBgl/Untitled?node-id=0%3A1)
 
-[mobile] (https://www.figma.com/file/D3OcDAu9EKstzYyahdjymK/Untitled?node-id=0%3A1)
+[Mobile](https://www.figma.com/file/D3OcDAu9EKstzYyahdjymK/Untitled?node-id=0%3A1)
 
-[Time] (https://imgur.com/a/gG6NRvs)
+[Time](https://imgur.com/a/gG6NRvs)
 
 ## Mvp
 - Routes 
@@ -21,16 +21,16 @@
 
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
-| Routes                 | H | 1.5hrs   | TBD |
-| Get all posts          | H | 1hr      | TBD |
-| Create posts           | H | 1hr      | TBD |
-| Remove posts           | H | 1hr      | TBD |
-| Edit posts             | H | 1hr      | TBD |
-| Nav bar                | H | 1hr      | TBD |
-| About page             | H | 2hrs     | TBD |
-| Page styling           | M | 8hrs     | TBD |
-| Deploying              | M | 4hrs     | TBD |
-| Total                  |   | 20.5hrs  | TBD |
+| Routes                 | H | 1.5hrs   | - |
+| Get all posts          | H | 1hr      | - |
+| Create posts           | H | 1hr      | - |
+| Remove posts           | H | 1hr      | - |
+| Edit posts             | H | 1hr      | - |
+| Nav bar                | H | 1hr      | - |
+| About page             | H | 2hrs     | - |
+| Page styling           | M | 8hrs     | - |
+| Deploying              | M | 4hrs     | - |
+| Total                  |   | 20.5hrs  | - |
 
 ## Post MVP
 - Search funtion
@@ -41,12 +41,12 @@
 
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
-| Search function          | M | 3hrs    ||
-| Flag / save list         | M | 2hrs    ||
-| Display user profiles    | M | 3.5hrs  ||
-| Upvote filtering system  | L | 6hrs    ||
-| Hamburger nav            | L | 1hr     ||
-| Total                    |   | 15hrs   ||
+| Search function          | M | 3hrs    | - |
+| Flag / save list         | M | 2hrs    | - |
+| Display user profiles    | M | 3.5hrs  | - |
+| Upvote filtering system  | L | 6hrs    | - |
+| Hamburger nav            | L | 1hr     | - |
+| Total                    |   | 15hrs   | - |
 
 ## Component
 - Home
