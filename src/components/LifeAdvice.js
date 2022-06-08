@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ProblemTile from "./ProblemTile";
 
 const LifeAdvice = () => {
   const [problem, setProblem] = useState('')
@@ -24,7 +25,12 @@ const LifeAdvice = () => {
   }, []) 
 
   const mappedInfo = allProbs.map((info) => {
-    return <li>{info.problem} - {info.solution}</li>
+    return (
+      <ProblemTile
+      problem = {info.problem}
+      solution = {info.solution}
+      />
+    )
   })
 
   return (
