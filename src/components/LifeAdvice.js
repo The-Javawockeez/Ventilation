@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const LifeAdvice = () => {
   const [problem, setProblem] = useState('')
-  const [allProbs, setAllProbs] = useState('')
+  const [allProbs, setAllProbs] = useState([])
 
   // live updates the text box
   const handleChange = (event) => {
@@ -21,9 +21,11 @@ const LifeAdvice = () => {
     fetch('https://infinite-brook-21883.herokuapp.com/Ventilation-api/advice/advice')
       .then(response => response.json())
       .then(data => setAllProbs(data.username))
-  }, [])
+  }, []) 
 
-
+  const mappedInfo = allProbs.map((info) => {
+    return <li>{info.problem} - {info.solution}</li>
+  })
 
   return (
     <>
@@ -31,6 +33,10 @@ const LifeAdvice = () => {
         <input type='text' placeholder='Need help?' value={problem} onChange={handleChange}></input>
         <input type='submit'></input>
       </form>
+
+      <ul>
+        {mappedInfo}
+      </ul>
     </>
   );
 }
