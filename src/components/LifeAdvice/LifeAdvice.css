@@ -1,5 +1,5 @@
 html{
-    background-color: grey;
+    background-color: rgb(95, 158, 160);
 }
 
 nav{
@@ -7,10 +7,8 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 1vw;
-    background-color: rgba(235, 169, 111, 0.589);
+    background-color: rgb(255, 248, 220);
     padding: 2vw;
-    
 }
 
 ul{
@@ -22,10 +20,12 @@ ul{
 }
 .ProbPost{
     margin-top: 5vw;
+    display: flex;
+    justify-content: center;
 }
 
 .ProbTile{
-    background-color: lightgrey;
+    background-color: rgb(255, 248, 220);
     margin: 1vw;
     border: 1px solid black;
     box-shadow: .5vw .3vw 2px black;
@@ -40,11 +40,14 @@ input{
 
 .submit{
     font-weight: 400;
-    font-size: 1.5vw;
+    font-size: 2vw;
+    background-color:rgb(255, 248, 220); 
 }
 
 .submit:hover{
     background-color: rgb(155, 153, 153);
-
 }
 
+input{
+    height: 4vw;
+}

@@ -106,14 +106,14 @@ function Home() {
   //--------------------------------------------------------------------------------------------------
   return (
     <div>
-      <h1>Home page</h1>
+      <h1>Ventilation</h1>
       <form className="input-form"
         onSubmit={handleSubmit}
       >
         <input className="username-input" size="20" type='text' placeholder="Username" name="userName" onChange={handleChange} value={addPost.userName} required></input>
         <input className="title-input" size="50" type='text' placeholder="Title" name='title' onChange={handleChange} value={addPost.title} required></input>
         <input className="post-input" size="100" type='text' placeholder="Add post here" name='content' onChange={handleChange} value={addPost.content} required></input>
-        <input className="submit-button" type="submit"></input>
+        <input className="submit" type="submit"></input>
       </form>
       {display}
     </div>
