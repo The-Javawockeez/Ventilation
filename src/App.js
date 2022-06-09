@@ -6,12 +6,12 @@ import LifeAdvice from './components/LifeAdvice/LifeAdvice';
 function App() {
   return (
     <div className="App">
-      <nav>
+      <div className="nav-bar">
       <Link to='/' >Home</Link>
       <Link to='/about'>About</Link>
       <Link to='/life-advice'>Life Advice</Link>
-      </nav>
       
+      </div>
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/about' element={<About />}/>
