@@ -1,3 +1,21 @@
 .App {
   text-align: center;
+  
+}
+
+body {
+  background-color: #5F9EA0
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFF8DC;
+  padding: 10px;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
 }
