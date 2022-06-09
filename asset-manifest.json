@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Ventilation/static/css/main.964fdded.css",
+    "main.js": "/Ventilation/static/js/main.37aa3911.js",
+    "static/js/787.637be49b.chunk.js": "/Ventilation/static/js/787.637be49b.chunk.js",
+    "index.html": "/Ventilation/index.html",
+    "main.964fdded.css.map": "/Ventilation/static/css/main.964fdded.css.map",
+    "main.37aa3911.js.map": "/Ventilation/static/js/main.37aa3911.js.map",
+    "787.637be49b.chunk.js.map": "/Ventilation/static/js/787.637be49b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.964fdded.css",
+    "static/js/main.37aa3911.js"
+  ]
+}
