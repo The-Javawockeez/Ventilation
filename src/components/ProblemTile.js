@@ -13,13 +13,13 @@ const ProblemTile = (props) => {
 
     return (
         <div className="ProbTile">
-            <li>{props.problem} - {props.solution}</li>
+            <li>{props.problem}</li>
             <ul>
                 {mappedComments}
             </ul>
             <form onSubmit={props.handleComment} className='CommentSubmit'>
-                <input type='text' placeholder='comment' value={props.commentText} onChange={handleChange}></input>
-                <input type='submit'></input>
+                <input type='text' placeholder='Comment' value={props.commentText} onChange={handleChange}></input>
+                <input type='submit' className="submit"></input>
             </form>
         </div>
     );
