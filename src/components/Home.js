@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import './stylesheets/Home.css'
+
 function Home() {
   const [posts, setPosts] = useState([])
   const [addPost, setAddPost] = useState({ userName: "", title: "", content: "" })
@@ -78,11 +80,11 @@ function Home() {
   const display = posts.map((post, index) => {
     if (post) {
       return (
-        <div key={index}>
-          <h3>{post.userName}</h3>
-          <p>{post.title}</p>
-          <p>{post.content}</p>
-          <button
+        <div className="general-posts" key={index}>
+          <p className="post-username">{post.userName}</p>
+          <p className="post-title">{post.title}</p>
+          <p className="post-content">{post.content}</p>
+          <button className="remove-button"
             onClick={() => handleRemove(post)}
           >Remove post</button>
           {post._id === editPost._id ? (
@@ -95,7 +97,7 @@ function Home() {
               </form>
             </div>
           ) : (
-            <button onClick={() => startEditing(post)}>Edit post</button>
+            <button className="edit-button" onClick={() => startEditing(post)}>Edit post</button>
           )}
         </div>
       )
@@ -105,13 +107,13 @@ function Home() {
   return (
     <div>
       <h1>Home page</h1>
-      <form
+      <form className="input-form"
         onSubmit={handleSubmit}
       >
-        <input type='text' placeholder="Username" name="userName" onChange={handleChange} value={addPost.userName} required></input>
-        <input type='text' placeholder="Title" name='title' onChange={handleChange} value={addPost.title} required></input>
-        <input type='text' placeholder="Add post here" name='content' onChange={handleChange} value={addPost.content} required></input>
-        <input type="submit"></input>
+        <input className="username-input" size="20" type='text' placeholder="Username" name="userName" onChange={handleChange} value={addPost.userName} required></input>
+        <input className="title-input" size="50" type='text' placeholder="Title" name='title' onChange={handleChange} value={addPost.title} required></input>
+        <input className="post-input" size="100" type='text' placeholder="Add post here" name='content' onChange={handleChange} value={addPost.content} required></input>
+        <input className="submit-button" type="submit"></input>
       </form>
       {display}
     </div>

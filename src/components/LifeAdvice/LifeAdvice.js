@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import ProblemTile from "./ProblemTile";
+import ProblemTile from "../ProblemTile";
+import Advice from './LifeAdvice.css'
 
 const LifeAdvice = () => {
   const [problem, setProblem] = useState('')
@@ -47,6 +48,29 @@ const LifeAdvice = () => {
   // handles the submittion of the form, adds the new comment to the api
   const handleComment = () => {
     console.log('clicked')
+    // event.preventDefault()
+    // console.log(comments)
+    // // let apiStructure = {comments: props.commentText}
+    // fetch(`https://infinite-brook-21883.herokuapp.com/Ventilation-api/advice/${id._id}`
+    //   , {
+    //     method: 'PATCH',
+    //     mode: 'cors',
+    //     headers: {
+    //       'Accept': 'application/json',
+    //       'Content-Type': 'application/json'
+    //     },
+    //     body: JSON.stringify(commentText)
+    //   }
+    // )
+    //   .then(response => response.json())
+    //   .then(data => console.log('heres your data' + data))
+    //   .then(data => {
+    //     console.log(commentText)
+    //     let copy = [...comments]
+    //     copy.push(commentText)
+    //     setComments(copy)
+    //     setCommentText('')
+    //   })
   }
 
   const getAll = () => {
@@ -78,8 +102,8 @@ const LifeAdvice = () => {
   return (
     <>
       <form onSubmit={handleSubmit} className='ProbPost'>
-        <input type='text' placeholder='Need help?' value={problem} onChange={handleChange}></input>
-        <input type='submit'></input>
+        <input type='text' placeholder='Need help? Make a post' value={problem} onChange={handleChange}></input>
+        <input type='submit' className='submit'></input>
       </form>
 
       <ul>
