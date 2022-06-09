@@ -3,6 +3,10 @@
     height: 200px;
 }
 
+html{
+    background-color: rgb(95, 158, 160);
+}
+
 form {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -29,7 +33,8 @@ form {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    background-color: #F0FFFF;
+    background-color: rgb(255, 248, 220);
+    margin: 2vw;
 }
 
 .post-username {
@@ -45,12 +50,15 @@ form {
 .post-content {
     grid-column: 1 / 10;
     grid-row: 3 / 11;
-    
-    
 }
 
 button {
-    background-color: #FFF8DC;
+    background-color: rgb(255, 248, 220);
+    margin: 1vw;
+}
+
+button:hover{
+    background-color: lightgrey ;
 }
 
 .edit-button {
@@ -63,6 +71,3 @@ button {
     grid-row: 10;
 }
 
-.submit-button {
-    background-color: #FFF8DC;
-}

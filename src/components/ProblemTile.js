@@ -18,7 +18,7 @@ const ProblemTile = (props) => {
                 {mappedComments}
             </ul>
             <form onSubmit={props.handleComment} className='CommentSubmit'>
-                <input type='text' placeholder='Comment' value={props.commentText} onChange={handleChange}></input>
+                <input type='text' className="text" placeholder='Comment' value={props.commentText} onChange={handleChange}></input>
                 <input type='submit' className="submit"></input>
             </form>
         </div>
