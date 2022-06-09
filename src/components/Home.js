@@ -1,15 +1,18 @@
 import { useEffect, useState } from 'react'
-import {useNavigate, useParams} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 function Home() {
   const [posts, setPosts] = useState([])
   const [addPost, setAddPost] = useState({ userName: "", title: "", content: "" })
+  const [editPost, setEditPost] = useState({ userName: "", title: "", content: "" })
   const navigate = useNavigate();
-  const params = useParams();
 
   // // add new post and display--------------------------------------------------------------
   const handleChange = (event) => {
-
     setAddPost({ ...addPost, [event.target.name]: event.target.value })
+  }
+  // edit our post---------------------------------------------------------------
+  const handleEditChange = (event) => {
+    setEditPost({ ...editPost, [event.target.name]: event.target.value })
   }
 
   const handleSubmit = (event) => {
@@ -44,21 +47,26 @@ function Home() {
     setPosts(filterDisplay)
   }
   // edit function---------------------------------------------------------------------------------
-  // const handleEdit = (id) => {
-  //   fetch("https://infinite-brook-21883.herokuapp.com/Ventilation-api/" + id._id, {
-  //       method: 'PATCH',
-  //       headers: {
-  //         'Accept': 'application/json',
-  //         'Content-Type': 'application/json'
-  //       },
-  //       body: JSON.stringify(addPost)
-  //     })
-  //   .then(response => response.json())
-  //   .then(data => {
-  //       setPosts(data.post)
-  //       setAddPost({ userName: "", title: "", content: "" })
-  //   })
-  // }
+  const handleEdit = (id) => {
+    fetch("https://infinite-brook-21883.herokuapp.com/Ventilation-api/" + id._id, {
+      method: 'PATCH',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(editPost)
+    })
+      .then(response => response.json())
+      .then(() => {
+        console.log(editPost)
+        const copy = [...posts]
+        copy.push(editPost)
+      })
+  }
+
+  const startEditing = (id) => {
+    setEditPost(id)
+  }
 
   //useEffect to display the data----------------------------------------------------------
   useEffect(() => {
@@ -66,23 +74,32 @@ function Home() {
       .then(response => response.json())
       .then(data => setPosts(data.data))
   }, [])
+  //display data function --------------------------------------------
   const display = posts.map((post, index) => {
-   if(post) {
-  
-    return (
-      <div key={index}>
-        <h3>{post.userName}</h3>
-        <p>{post.title}</p>
-        <p>{post.content}</p>
-        <button 
-      onClick={() => handleRemove(post)} 
-      >Remove post</button>  
-      <button 
-      // onClick={() => handleEdit(post)} 
-      >Edit post</button> 
-      </div>
-    )
-   }
+    if (post) {
+      return (
+        <div key={index}>
+          <h3>{post.userName}</h3>
+          <p>{post.title}</p>
+          <p>{post.content}</p>
+          <button
+            onClick={() => handleRemove(post)}
+          >Remove post</button>
+          {post._id === editPost._id ? (
+            <div>
+              <form>
+                <input type='text' name="userName" onChange={handleEditChange} ></input>
+                <input type='text' name='title' onChange={handleEditChange}></input>
+                <input type='text' name='content' onChange={handleEditChange} ></input>
+                <input onClick={() => handleEdit(post)} type="submit"></input>
+              </form>
+            </div>
+          ) : (
+            <button onClick={() => startEditing(post)}>Edit post</button>
+          )}
+        </div>
+      )
+    }
   })
   //--------------------------------------------------------------------------------------------------
   return (
