@@ -5,6 +5,8 @@ const LifeAdvice = () => {
   const [problem, setProblem] = useState('')
   const [solution, setSolution] = useState('')
   const [allProbs, setAllProbs] = useState([])
+  const [comments, setComments] = useState([])
+  const [commentText, setCommentText] = useState('')
 
   // live updates the text box
   const handleChange = (event) => {
@@ -12,15 +14,12 @@ const LifeAdvice = () => {
     setProblem(event.target.value)
   }
 
-  // console.log(problem)
-
   // handles the submittion of the form
   const handleSubmit = (event) => {
     let test = {
       problem: problem,
       solution: solution,
-      comments: [
-      ]
+      comments: comments
     }
     event.preventDefault()
     fetch("https://infinite-brook-21883.herokuapp.com/Ventilation-api/advice"
@@ -35,22 +34,31 @@ const LifeAdvice = () => {
     )
       .then(response => response.json())
       .then(data => {
-        console.log(data)
+        setProblem('')
+        let copyComments = [...comments]
+        copyComments.push(commentText)
+        setComments(copyComments)
+        setCommentText('')
+        getAll()
       }
       )
-      .catch(() => {
-        console.log('missed the .then')
-      })
   }
 
-  // populates the page with information on load
-  useEffect(() => {
+  // handles the submittion of the form, adds the new comment to the api
+  const handleComment = () => {
+    console.log('clicked')
+  }
+
+  const getAll = () => {
     fetch('https://infinite-brook-21883.herokuapp.com/Ventilation-api/advice/advice')
       .then(response => response.json())
       .then(data => setAllProbs(data.username))
-  }, [])
+  }
 
-  const mappedInfo = allProbs.map((info) => {
+  // populates the page with information on load
+  useEffect(() => { getAll() }, [])
+
+  const mappedInfo = allProbs.map((info, handleComment) => {
     // console.log(info)
     return (
       <ProblemTile
@@ -58,6 +66,11 @@ const LifeAdvice = () => {
         problem={info.problem}
         solution={info.solution}
         id={info._id}
+        commentArr={info.comments}
+        setComments={info.setComments}
+        commentText={info.commentText}
+        setCommentText={info.setCommentText}
+        handleComment={handleComment}
       />
     )
   })
